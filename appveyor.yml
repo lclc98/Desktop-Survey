@@ -20,7 +20,7 @@ init:
   - git config --global core.autocrlf input
 
 install:
-  - ps: Install-Product node 8 x64
+  - ps: Install-Product node 10 x64
   - git reset --hard HEAD
   - yarn
   - node --version
@@ -30,3 +30,12 @@ build_script:
   - yarn build
 
 test: off
+
+deploy:
+  release: 'desktop-surveyv$(appveyor_build_version)'
+  provider: GitHub
+  auth_token:
+    secure: hWuVCUXD59Ar9Hbho74jJrOLqSvJ3S6CqYRjwSDDJT98/Ypics5V+QWZbmel5Wyd
+  artifact: /build/*.exe            # upload all NuGet packages to release assets
+  on:
+    branch: master                 # release from master branch only

@@ -46,6 +46,7 @@
       "icon": "build/icons/icon.icns"
     },
     "win": {
+      "target": "portable",
       "icon": "build/icons/icon.ico"
     },
     "linux": {
@@ -55,9 +56,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "buefy": "^0.7.1",
-    "vue": "^2.5.16",
+    "vue": "^2.5.22",
     "vue-electron": "^1.0.6",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1",
+    "vuex-electron": "^1.0.2",
+    "xlsx": "^0.14.1"
   },
   "devDependencies": {
     "ajv": "^6.5.0",

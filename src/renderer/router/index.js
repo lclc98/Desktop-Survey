@@ -9,8 +9,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'survey-page',
+      name: 'survey',
       component: require('@/components/Survey').default
+    },
+    {
+      path: '/questions',
+      name: 'questions',
+      component: require('@/components/Questions').default
+    },
+    {
+      path: '/complete',
+      name: 'complete',
+      component: require('@/components/Complete').default
     },
     {
       path: '*',
