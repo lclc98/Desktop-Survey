@@ -30,13 +30,3 @@ build_script:
   - yarn build
 
 test: off
-
-deploy:
-  release: 'desktop-surveyv$(appveyor_build_version)'
-  provider: GitHub
-  auth_token:
-    secure: hWuVCUXD59Ar9Hbho74jJrOLqSvJ3S6CqYRjwSDDJT98/Ypics5V+QWZbmel5Wyd
-  artifact: ./build/*.exe
-  on:
-    branch: master
-    APPVEYOR_REPO_TAG: true
