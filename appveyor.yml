@@ -36,6 +36,6 @@ deploy:
   provider: GitHub
   auth_token:
     secure: hWuVCUXD59Ar9Hbho74jJrOLqSvJ3S6CqYRjwSDDJT98/Ypics5V+QWZbmel5Wyd
-  artifact: /build/*.exe            # upload all NuGet packages to release assets
-  on:
-    branch: master                 # release from master branch only
+  artifact: ./build/*.exe
+    branch: master
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
