@@ -37,5 +37,6 @@ deploy:
   auth_token:
     secure: hWuVCUXD59Ar9Hbho74jJrOLqSvJ3S6CqYRjwSDDJT98/Ypics5V+QWZbmel5Wyd
   artifact: ./build/*.exe
+  on:
     branch: master
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
+    APPVEYOR_REPO_TAG: true
